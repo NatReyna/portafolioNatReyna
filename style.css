@@ -1,0 +1,180 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+:root
+{
+    --crl: #fff; 
+}
+
+body
+{
+   /*
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    */
+    background: rgb(255,212,237);
+    background: linear-gradient(133deg, rgba(255,212,237,1) 0%, rgba(219,153,221,1) 46%, rgba(157,181,255,1) 100%);
+}
+
+.navigation
+{
+    width: 350px;
+    height: 70px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.navigation ul
+{
+    display: flex;
+    width: 350px;
+}
+
+.navigation ul li
+{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigation ul li a
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigation ul li a .icon
+{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: #493647;
+}
+
+.navigation ul li.active a .icon
+{
+    transform: translateY(-35px);
+}
+
+.navigation ul li a .text
+{
+    position: absolute;
+    color: #493647;
+    font-weight: 700;
+    font-size: 0.90em;
+    letter-spacing: 0;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(40px);
+
+}
+
+.navigation ul li.active a .text
+{
+    opacity: 1;
+    transform: translateY(10px)
+}
+
+.indicator
+{
+    position: absolute;
+    top: 13%;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(133deg, rgba(255,205,234,1) 0%, rgba(219,153,221,1) 46%, rgba(157,181,255,1) 100%);
+    border-radius: 50%;
+    border: 6px solid var(--crl);
+    transition: 0.5s;
+}
+
+/*
+.indicator::before
+{
+    content: '' ;
+    position: absolute;
+    top: 50%;
+    left: -22.5 px;
+    width: 20;
+    height: 20px;
+    background: #CB0B1D;
+    border-top-right-radius:20px;
+    box-shadow: 0px -10px 0 0 var(--crl);
+}
+*/
+
+.navigation ul li:nth-child(1).active ~ .indicator
+{
+    transform: translateX(calc(70px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator
+{
+    transform: translateX(calc(70px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator
+{
+    transform: translateX(calc(70px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator
+{
+    transform: translateX(calc(70px * 3));
+}
+
+.Marca
+{
+    font-family: 'Abril Fatface'; 
+    font-size:80px;
+    color: #493647;
+    justify-content: center;
+    text-align: center;
+   
+    
+}
+
+
+.Texto1
+{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    color: #493647;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    line-height : 27px;
+}
+
+.Info
+{
+    font-family: 'Abril Fatface'; 
+    font-size:30px;
+    color: #493647;
+    justify-content: center;
+    text-align: center;
+   
+    
+}
